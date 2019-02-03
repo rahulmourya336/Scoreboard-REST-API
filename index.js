@@ -11,10 +11,10 @@ fastify.get('/', (request, reply) => {
 });
 
 // Run the server!
-fastify.listen(process.env.PORT, (err) => {
+ffastify.listen(process.env.PORT, '0.0.0.0', function (err, address) {
   if (err) {
     fastify.log.error(err)
     process.exit(1)
   }
-  fastify.log.info(`server listening on ${fastify.server.address().port}`)
-});
+  fastify.log.info(`server listening on ${address}`)
+})
