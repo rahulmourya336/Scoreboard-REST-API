@@ -4,7 +4,6 @@ const fastify = require('fastify')({
 });
 
 const path = require('path');
-// const PORT = process.env.PORT || 5000;
 
 // Declare a route
 fastify.get('/', (request, reply) => {
