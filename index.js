@@ -12,7 +12,7 @@ fastify.get('/', (request, reply) => {
 });
 
 // Run the server!
-fastify.listen(process.env.PORT || 5000, (err) => {
+fastify.listen(process.env.PORT, (err) => {
   if (err) {
     fastify.log.error(err)
     process.exit(1)
