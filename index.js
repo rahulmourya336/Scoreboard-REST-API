@@ -4,11 +4,15 @@ const fastify = require('fastify')({
 });
 
 const path = require('path');
+require('./redis');
 
 // Declare a route
 fastify.get('/', (request, reply) => {
-  reply.send({ hello: 'world' })
+  reply.send({ Scoreboard_API: 'Use routes GET, POST & PUT.' })
 });
+
+fastify.register(require('./Routes/scoreboard'));
+
 
 // Run the server!
 fastify.listen(process.env.PORT, '0.0.0.0', function (err, address) {
